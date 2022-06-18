@@ -14,7 +14,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo&family=Inter&display=swap');
 
 /*fonts*/
-
+/*global parameters*/
 *,
 *::before,
 *::after {
@@ -27,8 +27,229 @@ body {
     font-family: 'Cardo', serif;
 }
 
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+}
+
+
 .wrapper {
     overflow: hidden;
     height: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 70px;
+}
+
+
+.content__flex-start {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-right: -15px;
+}
+
+/*global parameters*/
+
+
+.header {
+    background: var(--blue);
+
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 1px;
+}
+
+.nav .nav__menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0;
+}
+
+.nav .mr {
+
+}
+
+
+.nav .active {
+    color: var(--yellow);
+}
+
+
+.nav .nav__item {
+    margin-right: 37.59px;
+}
+
+.nav .nav__item:hover {
+    content: '';
+    border-bottom: 2px solid var(--yellow);
+    transition: 0.2s;
+}
+
+.nav .nav__logo:before {
+    content: '';
+    display: flex;
+    align-items: center;
+    width: 119px;
+    height: 35px;
+    background-size: contain;
+    background: url('../images/Header/Logo.svg') no-repeat center;
+}
+
+.nav .nav__item-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white);
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
+}
+
+.nav .nav__item-social:hover {
+    background: var(--yellow);
+    cursor: pointer;
+}
+
+.nav .facebook::before {
+    content: '';
+    background: url('../images/Header/social/facebook-vector.svg') no-repeat center;
+    display: block;
+    width: 9px;
+    height: 15px;
+}
+
+.nav .twitter::before {
+    content: '';
+    background: url('../images/Header/social/twitter-vector.svg') no-repeat center;
+    display: block;
+    width: 14px;
+    height: 12px;
+}
+
+.nav .linkedIn::before {
+    content: '';
+    background: url('../images/Header/social/linkenIn-vector.svg') no-repeat center;
+    display: block;
+    width: 13px;
+    height: 13px;
+}
+
+.nav__basket {
+    margin-right: 51px;
+}
+
+.nav__basket-logo::before {
+    content: '';
+    background: url("../images/Header/Basket.svg");
+    width: 17px;
+    height: 17px;
+    display: block;
+}
+
+.nav__btn-order {
+    background: var(--yellow);
+    padding: 24.5px 61.51px;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+@keyframes example {
+    0% {
+        background-color: red;
+        color: black;
+    }
+    25% {
+        background-color: yellow;
+        color: #1B3764;
+    }
+    50% {
+        background-color: blue;
+        color: #fff;
+    }
+    100% {
+        background-color: green;
+    }
+}
+
+.nav__btn-order:hover {
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+
+.header__main {
+
+}
+
+.header__main .header__title {
+    font-family: 'Cardo', serif;
+    font-size: 21px;
+    line-height: 1.7;
+    font-weight: 400;
+    position: relative;
+    margin-left: 45px;
+}
+
+.header__main .header__title::before {
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 2px;
+    left: -44px;
+    top: calc(50% - 2px / 2);
+
+    background: #FFCA42;
+    border-radius: 0;
+}
+
+.header__main .header__main-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.header__main .header__content {
+    font-family: 'Cardo', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 78px;
+    /* identical to box height, or 122% */
+
+    letter-spacing: 1.3px;
+
+    color: #FFFFFF;
 }
 
